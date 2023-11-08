@@ -23,7 +23,7 @@ async function render(pageContext: PageContextServer) {
   const title = (documentProps && documentProps.title) || 'Vite SSR app'
   const desc = (documentProps && documentProps.description) || 'App using Vite + Vike'
 
-  const documentHtml = escapeInject`<!DOCTYPE html>
+  const app_location = escapeInject`<!DOCTYPE html>
     <html lang="en">
       <head>
         <meta charset="UTF-8" />
@@ -38,7 +38,7 @@ async function render(pageContext: PageContextServer) {
     </html>`
 
   return {
-    documentHtml,
+    app_location,
     pageContext: {
       // We can add some `pageContext` here, which is useful if we want to do page redirection https://vike.dev/page-redirection
     }
